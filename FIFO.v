@@ -111,27 +111,6 @@ module FIFO #(parameter ADDR_WIDTH = 5, DATA_WIDTH = 8 )(
 	    .Full(Full_internal),
 	    .Empty(Empty_internal)
 	); 
-
-//    Synchronizer #(
-//        .Num_Stages(Num_Stages),
-//        .Bus_Width(1),
-//        .RST_VAL(1'b1)
-//    ) Empty_Synchronizer(
-//        .clk(clk_read),
-//        .rst_n(rst_n),
-//        .Async_Bits(Empty_internal),
-//        .Sync_Bits(Empty)
-//    );
-//    
-//    Synchronizer #(
-//        .Num_Stages(Num_Stages),
-//        .Bus_Width('b1)
-//    ) Full_Synchronizer(
-//        .clk(clk_write),
-//        .rst_n(rst_n),
-//        .Async_Bits(Full_internal),
-//        .Sync_Bits(Full)
-//    );
  
 assign Empty = Empty_internal;
 assign Full = Full_internal;
