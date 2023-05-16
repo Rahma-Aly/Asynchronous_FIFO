@@ -25,7 +25,7 @@ module RAM #(parameter ADDR_WIDTH = 5, DATA_WIDTH = 8)(
            end
    end
    
-   always @(*) begin : read_block //? clk
+   always @(*) begin : read_block 
        if (~rst_n) begin
            DataOut <= 0;
        end
